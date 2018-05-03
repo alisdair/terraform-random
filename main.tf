@@ -3,7 +3,7 @@ resource "random_id" "random" {
     uuid = "${uuid()}"
   }
 
-  byte_length = 8
+  byte_length = 10
 }
 
 output "random" {
@@ -11,9 +11,7 @@ output "random" {
 }
 
 terraform {
-  backend "s3" {
-    bucket = "milkdiarmid-tf-state"
-    key = "terraform-random"
-    region = "us-east-2"
+  backend "atlas" {
+    name = "alisdair-v2/s3-random"
   }
 }
