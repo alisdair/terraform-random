@@ -1,5 +1,5 @@
 variable "bytes" {
-  default = 14
+  default = 12
 }
 
 variable "number" {
