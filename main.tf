@@ -3,7 +3,7 @@ variable "bytes" {
 }
 
 variable "number" {
-  default = 1
+  default = 5
 }
 
 resource "random_id" "random" {
@@ -17,5 +17,5 @@ resource "random_id" "random" {
 }
 
 output "random" {
-  value = "rand-${random_id.random.*.hex}"
+  value = "${random_id.random.*.hex}"
 }
