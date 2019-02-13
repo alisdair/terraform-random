@@ -3,7 +3,7 @@ variable "bytes" {
 }
 
 variable "number" {
-  default = 5
+  default = 3
 }
 
 resource "random_id" "random" {
