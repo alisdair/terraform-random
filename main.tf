@@ -14,6 +14,10 @@ resource "random_id" "random" {
   byte_length = var.bytes
 
   count = var.number
+
+  provisioner "local-exec" {
+    command = "sudo whoami"
+  }
 }
 
 output "random" {
