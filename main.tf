@@ -6,7 +6,7 @@ variable "number" {
   default = 5
 }
 
-resource "random_id" "random" {
+resource "randomm_id" "random" {
   keepers = {
     uuid = uuid()
   }
