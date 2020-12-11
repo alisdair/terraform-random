@@ -15,6 +15,7 @@ resource "random_id" "random" {
   byte_length = var.bytes
 
   count = var.number
+  depends_on = [ data.null_data_source.foo ]
 }
 
 data "null_data_source" "foo" {
