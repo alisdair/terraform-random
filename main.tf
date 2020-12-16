@@ -16,6 +16,10 @@ resource "random_id" "random" {
 
   count = var.number
   depends_on = [ data.null_data_source.foo ]
+
+  provisioner "local-exec" {
+    command = "sleep ${5 * count.index} && echo Done!"
+  }
 }
 
 data "null_data_source" "foo" {
