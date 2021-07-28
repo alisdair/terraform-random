@@ -22,12 +22,6 @@ resource "random_id" "random" {
   }
 }
 
-data "null_data_source" "foo" {
-  inputs = {
-    bar = "boop"
-  }
-}
-
 output "random" {
   value = random_id.random.*.hex
 }
