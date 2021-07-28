@@ -18,6 +18,10 @@ resource "random_id" "random" {
   provisioner "local-exec" {
     command = "sleep ${5 * count.index} && echo Done!"
   }
+  
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 output "random" {
